@@ -1,5 +1,8 @@
-import java.util.Scanner;
-public class Bichinho {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+class Bichinho {
     private String nome;
     private int fome;
     private int saude;
@@ -16,15 +19,15 @@ public class Bichinho {
         this.nome = novoNome;
     }
 
-    public void alimentar(int quantidadeComida) {
-        this.fome -= quantidadeComida;
+    public void alimentar() {
+        this.fome -= 2;
         if (this.fome < 0) {
             this.fome = 0;
         }
     }
 
-    public void brincar(int tempoBrincadeira) {
-        this.saude += tempoBrincadeira;
+    public void brincar() {
+        this.saude += 2;
         if (this.saude > 10) {
             this.saude = 10;
         }
@@ -59,9 +62,4 @@ public class Bichinho {
             return "Neutro";
         }
     }
-
-    public String str() {
-        return "Nome: " + this.nome + "\nFome: " + this.fome + "\nSaúde: " + this.saude + "\nIdade: " + this.idade;
-    }
 }
-
